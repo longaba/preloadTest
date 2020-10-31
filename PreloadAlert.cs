@@ -173,6 +173,7 @@ namespace PreloadAlert
                             {
                                 ImGui.TextColored((alert.FastColor?.Invoke() ?? alert.Color ?? Settings.DefaultTextColor).ToImguiVec4(),
                                     $"{alert.Text}");
+                                ImGui.Text("qwe?");
                             }
 
                             ImGui.TreePop();
