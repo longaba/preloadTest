@@ -377,8 +377,7 @@ namespace PreloadAlert
             {
                 foreach (var line in DrawAlerts)
                 {
-                    lastLine = Graphics.DrawText("check", startDrawPoint,
-                        line.FastColor?.Invoke() ?? line.Color ?? Settings.DefaultTextColor, FontAlign.Right);
+                    lastLine = Graphics.DrawText("check", startDrawPoint, Settings.DefaultTextColor, FontAlign.Right);
                         
                         startDrawPoint.Y += lastLine.Y;
                         maxWidth = Math.Max(lastLine.X, maxWidth);
@@ -386,7 +385,7 @@ namespace PreloadAlert
                     {
                         var foundColor = new ColorBGRA(255, 0, 0, 255);
                     //255 0 0 255
-                        lastLine = Graphics.DrawText("found!", startDrawPoint, foundColor, FontAlign.Right);
+                        lastLine = Graphics.DrawText("found!", startDrawPoint, Settings.DefaultTextColor, FontAlign.Right);
                         
                         startDrawPoint.Y += lastLine.Y;
                         maxWidth = Math.Max(lastLine.X, maxWidth);
