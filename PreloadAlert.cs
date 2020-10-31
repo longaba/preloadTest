@@ -394,6 +394,11 @@ namespace PreloadAlert
 
                         startDrawPoint.Y += lastLine.Y;
                         maxWidth = Math.Max(lastLine.X, maxWidth);
+                        //==
+                        lastLine = Graphics.DrawText("Not found!", startDrawPoint, Settings.DefaultTextColor, FontAlign.Right);
+                        
+                        startDrawPoint.Y += lastLine.Y;
+                        maxWidth = Math.Max(lastLine.X, maxWidth);
                     }  
                 }
             }
