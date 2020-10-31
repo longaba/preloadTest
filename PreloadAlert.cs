@@ -375,6 +375,7 @@ namespace PreloadAlert
             }
             else
             {
+                MessageBox.Show("TEST");
                 foreach (var line in DrawAlerts)
                 {
                     lastLine = Graphics.DrawText("check", startDrawPoint, Settings.DefaultTextColor, FontAlign.Right);
