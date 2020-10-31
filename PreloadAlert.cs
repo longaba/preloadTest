@@ -377,6 +377,10 @@ namespace PreloadAlert
             {
                 foreach (var line in DrawAlerts)
                 {
+                    lastLine = Graphics.DrawText("check", startDrawPoint, Settings.DefaultTextColor, FontAlign.Right);
+                        
+                        startDrawPoint.Y += lastLine.Y;
+                        maxWidth = Math.Max(lastLine.X, maxWidth);
                     if (line.Text.Contains("Farric"))
                     {
                         var foundColor = new ColorBGRA(255, 0, 0, 255);
