@@ -377,21 +377,24 @@ namespace PreloadAlert
             {
                 foreach (var line in DrawAlerts)
                 {
-                    lastLine = Graphics.DrawText(line.Text, startDrawPoint,
-                        line.FastColor?.Invoke() ?? line.Color ?? Settings.DefaultTextColor, FontAlign.Right);
-                    
-
-                    startDrawPoint.Y += lastLine.Y;
-                    maxWidth = Math.Max(lastLine.X, maxWidth);
-                    
                     if (line.Text.Contains("Farric"))
                     {
-                        lastLine = Graphics.DrawText("found!", startDrawPoint,
-                            line.FastColor?.Invoke() ?? line.Color ?? Settings.DefaultTextColor, FontAlign.Right);
+                    foundColor = new ColorBGRA(255, 0, 0, 255);
+                    //255 0 0 255
+                        lastLine = Graphics.DrawText("found!", startDrawPoint, foundColor, FontAlign.Right);
                         
                         startDrawPoint.Y += lastLine.Y;
                         maxWidth = Math.Max(lastLine.X, maxWidth);
                     }
+                    else 
+                    {
+                        lastLine = Graphics.DrawText(line.Text, startDrawPoint,
+                        line.FastColor?.Invoke() ?? line.Color ?? Settings.DefaultTextColor, FontAlign.Right);
+                    
+
+                        startDrawPoint.Y += lastLine.Y;
+                        maxWidth = Math.Max(lastLine.X, maxWidth);
+                    }  
                 }
             }
 
