@@ -379,7 +379,7 @@ namespace PreloadAlert
                 {
                     if (line.Text.Contains("Farric"))
                     {
-                    foundColor = new ColorBGRA(255, 0, 0, 255);
+                        var foundColor = new ColorBGRA(255, 0, 0, 255);
                     //255 0 0 255
                         lastLine = Graphics.DrawText("found!", startDrawPoint, foundColor, FontAlign.Right);
                         
