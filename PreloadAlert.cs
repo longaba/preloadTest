@@ -174,9 +174,8 @@ namespace PreloadAlert
                                 ImGui.TextColored((alert.FastColor?.Invoke() ?? alert.Color ?? Settings.DefaultTextColor).ToImguiVec4(),
                                     $"{alert.Text}");
                                 ImGui.Text("new item");
-                                string s1 = alert.Text;
                                 string s2 = "Farric";
-                                if (s1.Contains(s2)) 
+                                if (alert.Text.Contains(s2)) 
                                 {
                                     ImGui.Text("found!");
                                 }
