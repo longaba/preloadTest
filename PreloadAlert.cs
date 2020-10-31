@@ -377,7 +377,8 @@ namespace PreloadAlert
             {
                 foreach (var line in DrawAlerts)
                 {
-                    lastLine = Graphics.DrawText("check", startDrawPoint, Settings.DefaultTextColor, FontAlign.Right);
+                    lastLine = Graphics.DrawText("check", startDrawPoint,
+                        line.FastColor?.Invoke() ?? line.Color ?? Settings.DefaultTextColor, FontAlign.Right);
                         
                         startDrawPoint.Y += lastLine.Y;
                         maxWidth = Math.Max(lastLine.X, maxWidth);
