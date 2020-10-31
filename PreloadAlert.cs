@@ -167,7 +167,7 @@ namespace PreloadAlert
 
                     if (alerts.Count > 0)
                     {
-                        if (ImGui.TreeNode("DrawAlerts edited"))
+                        if (ImGui.TreeNode("DrawAlerts"))
                         {
                             foreach (var alert in DrawAlerts)
                             {
