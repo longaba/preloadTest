@@ -173,7 +173,10 @@ namespace PreloadAlert
                             {
                                 ImGui.TextColored((alert.FastColor?.Invoke() ?? alert.Color ?? Settings.DefaultTextColor).ToImguiVec4(),
                                     $"{alert.Text}");
-                                if (alert.Text.Contains("Farric Taurus")) 
+                                    
+                                string s1 = alert.Text;
+                                string s2 = "Farric";
+                                if (s1.Contains(s2)) 
                                 {
                                     ImGui.Text("found!");
                                 }
